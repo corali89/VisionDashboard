@@ -1,0 +1,15 @@
+<div class="row" style="margin-top: 60px;margin-bottom: 27px;">
+    <div class="col-md-12">
+        <div class="c_panel">
+            <div class="c_title">
+                <h2>Stores efficiency</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="c_content">
+                <div class="col-lg-3 widget" ng-repeat="b in chartOptions">
+                    <nvd3 options="b" data="data[$index]"></nvd3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,11 +7,13 @@
     angular.module('LoginApp', []);
     angular.module('ReplenishmentApp', []);
     angular.module('LoyaltyApp', []);
+    angular.module('FittingRoomApp', []);
     angular
         .module('MainApp', [
             'LoginApp',
             'ReplenishmentApp',
             'LoyaltyApp',
+            'FittingRoomApp',
             'datatables',
             'ngCookies',
             'ui.router',
@@ -42,8 +44,13 @@
                 url: "/loyalty",
                 controller: 'LoyaltyController',
                 templateUrl: "app/components/Loyalty/dashboard.html"
+            })
+            .state('layout.fittingRoom', {
+                url: "/fittingRoom",
+                controller: 'FittingRoomController',
+                templateUrl: "app/components/FittingRoom/dashboard.html"
             });
-        $urlRouterProvider.otherwise("dashboard/replenishment");
+        $urlRouterProvider.otherwise("dashboard/fittingRoom");
 
     }
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];

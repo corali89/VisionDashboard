@@ -1,8 +1,9 @@
 <section id="main-content" ng-controller="ReplenishmentController as vm">
     <section class="wrapper">
-        <ng-include src="'app/components/Replenishment/_mostSoldSku.html'"></ng-include>
+        <ng-include src="'app/components/Replenishment/_popularsBySku.html'"></ng-include>
+        <ng-include src="'app/components/Replenishment/_popularsByStyle.html'"></ng-include>
 
-        <ng-include src="'app/components/Replenishment/_mostSoldStyle.html'"></ng-include>
+
+        <ng-include ng-if="$root.IsManager" src="'app/components/Replenishment/_totalsTable.html'"></ng-include>
     </section>
-
 </section>
