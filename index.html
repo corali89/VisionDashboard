@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="">
+    <meta name="keywords" content="Magic Leap Dashboard">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="">
+    <title>Vision Dashboard</title>
+
+
+    <!-- Start Global plugin css -->
+
+    <link src="assets/js/bower_components/angular-bootstrap/ui-bootstrap.css" rel="stylesheet">
+    <link href="assets/css/global-plugins.css" rel="stylesheet">
+    <link href="assets/vendors/jquery-icheck/skins/all.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+
+    <link href="assets/css/theme.css" rel="stylesheet">
+
+    <link href="assets/css/style-responsive.css" rel="stylesheet"/>
+    <link href="assets/css/class-helpers.css" rel="stylesheet"/>
+
+    <!--For this page uses this css plugin only table-->
+    <link href="assets/css/table-responsive.css" rel="stylesheet"/>
+    <link href="assets/vendors/datatable/bootstrap/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!--Color schemes-->
+    <link href="assets/css/colors/new_blue.css" rel="stylesheet">
+
+    <!--Fonts-->
+    <!--<link href="assets/fonts/Indie-Flower/indie-flower.css" rel="stylesheet" />-->
+    <link href="assets/fonts/Open-Sans/open-sans.css?family=Open+Sans:300,400,700" rel="stylesheet"/>
+    <link href="assets/js/bower_components/angular-datatables/dist/css/angular-datatables.min.css" rel="stylesheet">
+
+    <!--<link href="assets/js/bower_components/angular-chart.js/dist/angular-chart.min.css" rel="stylesheet" >-->
+</head>
+
+<body ng-app="MainApp" id="default-scheme">
+
+<div ui-view></div>
+
+
+<script src="assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="assets/js/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/bower_components/angular/angular.js"></script>
+
+<script src="assets/js/bower_components/d3/d3.js"></script>
+<script src="assets/js/bower_components/nvd3/build/nv.d3.js"></script>
+<script src="assets/js/bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+
+<!--<script src="assets/js/bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>-->
+
+<script src="assets/js/angular-datatables.js"></script> <!--redirect when I pull the visible property yo git datatable library-->
+<script src="assets/js/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+<script src="assets/vendors/angular/js/angular-cookies.js"></script>
+<script src="assets/js/bower_components/jquery-ui/jquery-ui.js"></script>
+
+<script src="assets/js/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="assets/js/respond.js"></script>
+<script src="assets/js/modernizr.custom.63321.js"></script>
+<script src="app/app.js"></script>
+
+<!-- shared scritps -->
+<script src="app/shared/ServiceUrls.js"></script>
+<script src="app/shared/Enums.js"></script>
+<script src="app/shared/Messages.js"></script>
+
+<!-- Login -->
+<script src="app/services/userService.js"></script>
+<script src="app/services/authenticationService.js"></script>
+<script src="app/components/Login/loginController.js"></script>
+
+<!-- Replenishment -->
+<!--<script src="assets/vendors/Smart-Table-master/dist/smart-table.js"></script>-->
+<script src="app/components/Replenishment/ReplenishmentController.js"></script>
+
+<!-- Loyalty -->
+<script src="app/components/Loyalty/LoyaltyController.js"></script>
+
+<!--<script src="assets/js/bower_components/Chart.js/Chart.js"></script>-->
+<!--<script src="assets/js/bower_components/angular-chart.js/dist/angular-chart.min.js"></script>-->
+</body>
+</html>
+

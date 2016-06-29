@@ -1,0 +1,65 @@
+/*DROPDOWNS*/
+@import url('dropdonw/demo.css');
+@import url('dropdonw/common.css');
+@import url('dropdonw/icons.css');
+
+.cd-dropdown ul {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+.cd-dropdown > span,
+.cd-dropdown ul li {
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.cd-dropdown ul li {
+	position: absolute;
+	width: 100%;
+	pointer-events: none;
+}
+
+.cd-active.cd-dropdown > span {
+	color: #E74C3C;
+}
+
+.cd-active.cd-dropdown ul li {
+	pointer-events: auto;
+}
+
+.cd-active.cd-dropdown ul li span {
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-ms-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+
+.cd-active.cd-dropdown ul li span:hover {
+	background: #E74C3C;
+	color: white !important;
+}
+.grey-border {
+	border: grey;
+	border-style: solid;
+	border-width: 2px;
+}
+.rounded-button {
+	border-radius: 25px;
+	padding: 3px;
+}
+.cancel {
+    background: #E74C3C;
+		padding: 3px 7px;
+}
+
+.save {
+	background: #0054ff;
+	padding: 3px 7px;
+}
+
+.edit {
+	background: #CCC;
+	padding: 3px 7px;
+}

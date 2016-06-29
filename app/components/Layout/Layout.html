@@ -1,0 +1,195 @@
+<link rel="shortcut icon" href="">
+<title>Vision Dashboard</title>
+
+
+<link href="assets/css/custom.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/js/bower_components/nvd3/build/nv.d3.css"/>
+<div id="default-scheme">
+    <aside>
+        <div id="sidebar" class="nav-collapse md-box-shadowed">
+            <div class="leftside-navigation leftside-navigation-scroll">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li class="sidebar-profile">
+                        <div class="profile-options-container">
+                            <p class="text-right profile-options">
+                                <span class="profile-options-close pe-7s-close fa-2x font-bold"></span>
+                            </p>
+                            <div class="profile-options-list animated zoomIn" ng-controller="LoginController as vm">
+                                <p><a ng-click="vm.logout()">Log Out</a></p>
+                            </div>
+                        </div>
+                        <div class="profile-main">
+                            <p class="text-right profile-options">
+                                <i class="profile-options-open icon-options-vertical fa-2x"></i>
+                            </p>
+                            <p>
+                                <span class="name">{{$root.globals.currentUser.name}}</span><br>
+                                <span class="position" style="font-family: monospace;">{{$root.globals.currentUser.role}}</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class='sub-menu'> <!--ng-if="$root.IsManager ">-->
+                        <a ui-sref='.replenishment' class="hvr-bounce-to-right-sidebar-parent">
+                            <span class='icon-sidebar icon-screen-desktop fa-2x'></span>
+                            <span>Replenishment</span>
+                        </a>
+                    </li>
+                    <li class='sub-menu'> <!--ng-if="$root.IsManager ">-->
+                        <a ui-sref='.loyalty' class="hvr-bounce-to-right-sidebar-parent">
+                            <span class='icon-sidebar icon-screen-desktop fa-2x'></span>
+                            <span>Loyalty</span>
+                        </a>
+                    </li>
+                    <li class='sub-menu'> <!--ng-if="$root.IsManager ">-->
+                        <a ui-sref='.replenishment' class="hvr-bounce-to-right-sidebar-parent">
+                            <span class='icon-sidebar icon-screen-desktop fa-2x'></span>
+                            <span>Fitting Room</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <section id="container">
+        <header class="header fixed-top clearfix">
+            <div class="brand">
+                <a class="logo" style="text-align: center">
+
+                </a>
+            </div>
+            <div class="top-nav" ng-controller="LoginController as vm">
+                <ul class="nav navbar-nav navbar-left" style="margin-left:30px;">
+                    <!--<li>-->
+                        <!--<a class="btn-menu-grid" title="Menu Grid">-->
+                            <!--<span class="icon-grid"></span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="dropdown">-->
+                        <!--<a  class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">-->
+                            <!--All Locations-->
+                            <!--<span class=" fa fa-angle-down" style="font-size:12px;"></span>-->
+                        <!--</a>-->
+                        <!--<ul class="dropdown-menu animated fadeInUp pull-right">-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">Dania Beach</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">-->
+                                    <!--<span class="badge bg-red pull-right"> 5 Missing</span>-->
+                                    <!--<span>Plantation</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">-->
+                                    <!--<span class="badge bg-red pull-right"></span>-->
+                                    <!--<span>Mountain View</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">-->
+                                    <!--<span class="badge bg-red pull-right"></span>-->
+                                    <!--<span>Mountain View</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">-->
+                                    <!--<span class="badge bg-red pull-right"></span>-->
+                                    <!--<span>Israel</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li class="search-box">-->
+                        <!--<input type="text" class="form-control search" placeholder=" Search">-->
+                    <!--</li>-->
+                    <!--<li role="presentation" class="dropdown">-->
+                        <!--<a class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">-->
+                            <!--<span class="pe-7s-mail" style="font-size:22.9px;"></span>-->
+                            <!--<span class="badge bg-color label-danger">6</span>-->
+                        <!--</a>-->
+                        <!--<ul id="menu" class="dropdown-menu list-unstyled msg_list animated fadeInUp" role="menu">-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">-->
+                                    <!--<span class="image">-->
+                                        <!--<img src="{{$root.globals.currentUser.avatarUrl}}" alt="Profile Image" />-->
+                                    <!--</span>-->
+                                    <!--<span>-->
+                                        <!--<span>John Smith</span>-->
+                                        <!--<span class="time">3 mins ago</span>-->
+                                    <!--</span>-->
+                                    <!--<span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">-->
+                                    <!--<span class="image">-->
+                                        <!--<img src="{{$root.globals.currentUser.avatarUrl}}" alt="Profile Image" />-->
+                                    <!--</span>-->
+                                    <!--<span>-->
+                                        <!--<span>John Smith</span>-->
+                                        <!--<span class="time">3 mins ago</span>-->
+                                    <!--</span>-->
+                                    <!--<span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">-->
+                                    <!--<span class="image">-->
+                                        <!--<img src="{{$root.globals.currentUser.avatarUrl}}" alt="Profile Image" />-->
+                                    <!--</span>-->
+                                    <!--<span>-->
+                                        <!--<span>John Smith</span>-->
+                                        <!--<span class="time">3 mins ago</span>-->
+                                    <!--</span>-->
+                                    <!--<span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a class="hvr-bounce-to-right">-->
+                                    <!--<span class="image">-->
+                                        <!--<img src="{{$root.globals.currentUser.avatarUrl}}" alt="Profile Image" />-->
+                                    <!--</span>-->
+                                    <!--<span>-->
+                                        <!--<span>John Smith</span>-->
+                                        <!--<span class="time">3 mins ago</span>-->
+                                    <!--</span>-->
+                                    <!--<span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li class='top-nav-li-see-all-alerts'>-->
+                                <!--<div class="text-center">-->
+                                    <!--<a href="inbox.html">-->
+                                        <!--<strong>See All Alerts</strong>-->
+                                        <!--<i class="fa fa-angle-right"></i>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+
+                    <li class="dropdown">
+                        <a class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <!--<img src="{{$root.globals.currentUser.avatarUrl}}" alt="image">-->
+                            {{$root.globals.currentUser.name}}
+                            <span class=" fa fa-angle-down"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-usermenu animated fadeInUp pull-right">
+                            <li><a ng-click="vm.logout()" class="hvr-bounce-to-right"><i class=" icon-login pull-right"></i>Log Out</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </header>
+        <div ui-view></div>
+    </section>
+    </section>
+    <script src="assets/js/global-plugins.js"></script>
+
+</div>
+</html>
+
+<!--===== Footer End ========-->

@@ -1,0 +1,377 @@
+﻿body {
+    /*background:url(Images/bg.png) no-repeat;*/
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    /*font-family:"Envoy Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: 'Proxima Nova Bold',"Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    color:black;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.pre-register-visitor label{
+    font-weight:normal !important;
+}
+
+.h11{
+    border-bottom: 1px solid black;
+    margin-bottom:20px;
+    padding-bottom:20px;
+}
+
+.pre-registration-form input.ng-invalid.ng-touched {
+    border-color: #FA787E;
+}
+
+/*
+
+*/
+#visitors-wrapper{
+    margin-top:25px !important;
+    font-weight:normal;
+}
+
+.right-panel .table thead{
+        background-color: #f8f8f9;
+}
+
+.right-panel .table td{
+    word-break:break-word;
+    vertical-align:middle;
+}
+
+.toggle-calendar{
+    cursor:pointer;
+    text-align:center;
+    margin-bottom:20px !important;
+    margin:auto;
+}
+
+.right-panel h3{
+    text-align:center;
+    margin-top:6px;
+    margin-bottom:15px;
+}
+
+.left-panel.col-xs-12, .left-panel.col-sm-12{
+    text-align:center;
+}
+
+.left-panel.col-md-9, .left-panel.col-lg-9{
+    text-align:left !important;
+}
+
+.left-panel.collapse{
+    display:block !important;
+    height:auto !important;
+}
+
+#dropdownMenu1, .form-control, .dropdown-menu{
+    width:100% !important;
+    max-width:500px;
+}
+
+#selected-dropdown{
+    width: 95%;
+    display: inline-block !important;
+    text-align: left;
+}
+
+.logo{
+    text-align: center;
+    margin: auto;
+    //margin-top: -50px;
+    background-color: #F1F1F1;
+    //margin-top: -50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C3C0C0;
+}
+
+.navbar-fixed-top{
+    top:auto !important;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom{
+    position:initial;
+}
+
+#copyright-logo{
+    height:40px;
+}
+
+.navbar{
+    color:white !important;
+    margin-bottom:0px;
+}
+
+.table thead {
+    /*background-color: gray !important;*/
+}
+
+.table th{
+    color:#005dd2;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+footer{
+    text-align:center;
+    color: black;
+}
+
+@media (min-width: 1200px) and (max-width: 1250px) {
+
+  .table-fix {
+    float: right; 
+    max-width: 940px;
+  }
+
+  /*html { background: red; }*/
+}
+
+@media (min-width: 1251px) and (max-width: 1350px) {
+
+  .table-fix {
+    float: right; 
+    max-width: 1000px;
+  }
+
+  /*html { background: yellow; }*/
+}
+
+@media (min-width: 1351px) and (max-width: 1500px) {
+
+  .table-fix {
+    float: right; 
+    max-width: 1100px;
+  }
+
+  /*html { background: purple; }*/
+}
+
+
+@media (max-width: 768px){
+    .table-responsive > .table {
+        background-color:transparent !important;
+    }
+}
+
+@media(max-width:990px){
+    .right-panel h3 {
+        margin-top: 15px;
+        margin-bottom: 19px;
+    }
+
+    .appointments {
+        margin-top:0px;
+    }
+}
+
+@media (max-width: 600px) {
+    #logo{
+        /*width: 90% !important;*/
+        height: auto;
+    }
+
+    .appointments{
+        margin: AUTO;
+    }
+
+   .modal-footer{
+        text-align:center;
+    }
+
+    .modal-footer .btn-primary{
+        margin-top:15px;
+    }
+
+    .appointments {
+        margin-top: 8px !important;
+    }
+
+    .appointments-title{
+        margin-top:8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .appointments {
+        margin-top: 15px !important;
+    }
+}
+
+@media(min-width:600px){
+    .appointments {
+        float: right;
+    }
+
+    .appointments-title{
+        display:inline;
+    }
+
+    .current-selected-date{
+        float:left;
+    }
+
+    .appointments-title{
+        margin-left:auto;
+        text-align:center;
+    }
+}
+
+#logout{
+    float:right;
+    margin:25px 10px auto auto;
+    padding:10px;
+    font-size:16px;
+}
+
+.modal{
+    color:black;
+}
+
+.btn a{
+    color:white;
+    text-decoration:none;
+}
+
+.table tbody tr td.visitor-name, .table tbody tr td.host-name{
+    text-transform:capitalize;
+}
+
+.edit-pre-registration a{
+    
+}
+
+#logo{
+    height:45px;
+    margin: 15px auto 0px auto;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    color: white;
+    font-size: 16px;
+}
+
+.pre-register-visitor {
+    max-width: 500px;
+    margin: auto;
+}
+
+.appointments{
+    margin-left:15px;
+    font-size: 17px;
+    margin-top:-6px;
+}
+
+.h31 a{
+    float: right;
+    font-size: 16px;
+    color: #0074C8;
+    text-decoration: underline;
+    margin-top: 5px;
+}
+
+h3.h31{
+    margin-bottom: 20px;
+}
+
+.cancel-appointment{
+    margin-left: 15px;
+}
+
+.edit-pre-registration a {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.no-visitors-td{
+    text-align:center !important;
+    font-size: 18px;
+}
+
+#datetimepicker{
+    cursor:pointer;
+    background-color:white;
+}
+
+.error{
+    color:red;
+}
+
+
+@import "bourbon"; 
+
+body {
+	background: #eee !important;	
+}
+
+.wrapper {	
+	margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}
+
+
+
