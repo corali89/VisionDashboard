@@ -50,7 +50,7 @@
                 controller: 'FittingRoomController',
                 templateUrl: "app/components/FittingRoom/dashboard.html"
             });
-        $urlRouterProvider.otherwise("dashboard/fittingRoom");
+        $urlRouterProvider.otherwise("dashboard/replenishment");
 
     }
     run.$inject = ['$rootScope', '$location', '$cookieStore', '$http'];

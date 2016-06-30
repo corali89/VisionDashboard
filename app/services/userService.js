@@ -9,24 +9,12 @@
     function UserService($http, ApiUrls) {
         var service = {};
 
-        // service.GetAll = GetAll;
-        // service.GetById = GetById;
         service.GetUserIdByUsername = GetUserIdByUsername;
-        // service.Create = Create;
-        // service.Update = Update;
-        // service.Delete = Delete;
         service.GetByUserNameAndPassword=GetByUserNameAndPassword;
         service.GetUserIdByEmail=GetUserIdByEmail;
 
         return service;
 
-        // function GetAll() {
-        //     return $http.get('/api/users').then(handleSuccess, handleError('Error getting all users'));
-        // }
-        //
-        // function GetById(id) {
-        //     return $http.get('/api/users/' + id).then(handleSuccess, handleError('Error getting user by id'));
-        // }
 
         function GetUserIdByUsername(username) {
             return $http.get(ApiUrls.getUserIdByUsernameUrl+'/'+ username+'/userId')
@@ -43,20 +31,18 @@
                 pass: password
             };
             return $http.post( ApiUrls.loginUrl,dataObj,{})
-                .then(handleSuccess,handleError("Error getting user by username and password"));
+                .then(handleSuccess,function (error) {
+                    console.log("hardcoded authentication");
+                    if(username=="owner")
+                        return {userName:"ctriana",name:"Corali Triana",groups:"Owners"};
+                    else if(username=="manager")
+                        return {userName:"ctriana",name:"Corali Triana",groups:"Managers"};
+                    else if(username=="regional_manager")
+                        return {userName:"ctriana",name:"Corali Triana",groups:"RegionalManagers"};
+                    else return {success:false};
+                });
         }
 
-        // function Create(user) {
-        //     return $http.post('/api/users', user).then(handleSuccess, handleError('Error creating user'));
-        // }
-        //
-        // function Update(user) {
-        //     return $http.put('/api/users/' + user.id, user).then(handleSuccess, handleError('Error updating user'));
-        // }
-        //
-        // function Delete(id) {
-        //     return $http.delete('/api/users/' + id).then(handleSuccess, handleError('Error deleting user'));
-        //}
 
         // private functions
 

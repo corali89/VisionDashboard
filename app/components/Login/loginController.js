@@ -25,16 +25,13 @@
                         vm.loginError = true;
                         vm.loginErrorMsg = "Incorrect Username/Password. Please try again.";
                     } else {
-                        AuthenticationService.SetCredentials(response).then(
-                            function (success) {
-                                vm.user = $rootScope.globals.currentUser;
-                                $scope.user = $rootScope.globals.currentUser;
-                                $cookieStore.put('globals', $rootScope.globals);
-                                vm.loginError = false;
-                                vm.loginErrorMsg = "";
-                                $location.path('/dashboard/register');
-                            }
-                        )
+                        AuthenticationService.SetCredentials(response);
+                        vm.user = $rootScope.globals.currentUser;
+                        $scope.user = $rootScope.globals.currentUser;
+                        $cookieStore.put('globals', $rootScope.globals);
+                        vm.loginError = false;
+                        vm.loginErrorMsg = "";
+                        $location.path('/dashboard/register');
                     }
                 }, function (error) {
                     vm.loginError = true;

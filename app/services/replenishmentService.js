@@ -26,7 +26,38 @@
         };
         function getStoresReportByDate() {
             return $http.get(ApiUrls.getStoreReportByDate)
-                .then(handleSuccess,handleError);
+                .then(handleSuccess,function () {
+                    return [
+                        {
+                            sku:"aASDWEDDEW",
+                            style: "Casual",
+                            daily: "27",
+                            weekly:"760",
+                            monthly:"2689"
+                        },
+                        {
+                            sku:"aASDWEDDEW",
+                            style: "Casual",
+                            daily: "27",
+                            weekly:"760",
+                            monthly:"2689"
+                        },
+                        {
+                            sku:"aASDWEDDEW",
+                            style: "Casual",
+                            daily: "27",
+                            weekly:"760",
+                            monthly:"2689"
+                        },
+                        {
+                            sku:"aASDWEDDEW",
+                            style: "Casual",
+                            daily: "27",
+                            weekly:"760",
+                            monthly:"2689"
+                        }
+                    ];
+                });
         };
         function handleError(error) {
             console.log("Magic Leap- Error " + error);
