@@ -6,67 +6,34 @@
     'use strict';
 
     angular
-        .module('MainApp')
-        .factory('ReplenishmentService', ReplenishmentService);
+        .module('ReplenishmentApp')
+        .service('ReplenishmentService', ReplenishmentService);
 
     ReplenishmentService.$inject = [ '$http','ApiUrls'];
     function ReplenishmentService( $http, ApiUrls) {
-        var service = {};
 
-        // service.MostSoldStyle = MostSoldStyle;
-        // service.MostSoldSku = MostSoldSku;
-        service.getTotals=getTotals;
-        return service;
+        this.getMostPopularsBySku= getMostPopularsBySku;
+        this.getMostPopularsByStyle= getMostPopularsByStyle;
+        this.getStoresReportByDate=getStoresReportByDate;
 
-        function MostSoldSku() {
-            return $http.get('')
+        function getMostPopularsBySku() {
+            return $http.get(ApiUrls.getMostPopularsBySkuUrl)
                 .then(handleSuccess,handleError);
         };
-        function getTotals() {
-            return $http.get(ApiUrls.loginUrl)
-                .then(handleSuccess,function () {
-                    return [
-                        {
-                            sku:"aASDWEDDEW",
-                            style: "Casual",
-                            daily: "27",
-                            weekly:"760",
-                            monthly:"2689"
-                        },
-                        {
-                            sku:"aASDWEDDEW",
-                            style: "Casual",
-                            daily: "27",
-                            weekly:"760",
-                            monthly:"2689"
-                        },
-                        {
-                            sku:"aASDWEDDEW",
-                            style: "Casual",
-                            daily: "27",
-                            weekly:"760",
-                            monthly:"2689"
-                        },
-                        {
-                            sku:"aASDWEDDEW",
-                            style: "Casual",
-                            daily: "27",
-                            weekly:"760",
-                            monthly:"2689"
-                        }
-                    ];
-                });
-
-        }
-
-
-        function handleSuccess(res) {
-            return res.data;
+        function getMostPopularsByStyle() {
+            return $http.get(ApiUrls.getMostPopularsByStyleUrl)
+                .then(handleSuccess,handleError);
+        };
+        function getStoresReportByDate() {
+            return $http.get(ApiUrls.getStoreReportByDate)
+                .then(handleSuccess,handleError);
         };
         function handleError(error) {
-            return function () {
-                return { success: false, message: error };
-            };
+            console.log("Magic Leap- Error " + error);
+            return [];
+        };
+        function handleSuccess(response) {
+            return response.data;
         };
     }
 })();

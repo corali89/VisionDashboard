@@ -6,8 +6,8 @@
                 <div class="clearfix"></div>
             </div>
             <div class="c_content">
-                <div class="col-lg-3 widget" ng-repeat="option in options">
-                    <nvd3 options="option" data="data[$index]"></nvd3>
+                <div class="col-lg-3 widget" ng-repeat="option in optionsByStyle">
+                    <nvd3 options="option" data="dataByStyle[$index]"></nvd3>
                 </div>
             </div>
         </div>

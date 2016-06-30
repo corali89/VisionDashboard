@@ -16,7 +16,10 @@ app.service('ApiUrls', function () {
     this.loginUrl = baseDevJavaLDAPServer + 'authenticateUser';
     this.getUserIdByEmailUrl=basePreRegistrationApiUrl+ 'userEmail';
     this.getUserIdByUsernameUrl=basePreRegistrationApiUrl+ 'username';
-
+    
+    this.getMostPopularsByStyleUrl="http://private-d18c0-visiondashboard.apiary-mock.com/getMostPopularsByStyle";
+    this.getMostPopularsBySkuUrl="http://private-d18c0-visiondashboard.apiary-mock.com/getMostPopularsBySku";
+    this.getStoreReportByDate="http://private-d18c0-visiondashboard.apiary-mock.com/getStoreReportByDate";
 
 });
 
